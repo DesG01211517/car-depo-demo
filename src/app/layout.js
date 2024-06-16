@@ -12,17 +12,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
-          <nav className="text-center">
-            <Link href="/">Home</Link>
-
-            <Link href="/pages/management">Inventory</Link>
-
-            <Link href="/pages/about/">About</Link>
+        <header className="w-100">
+          <nav className="flex justify-center w-100">
+            <Link className="m-2 hover:text-red-700" href="/">
+              Home
+            </Link>
+            <Link className="m-2 hover:text-red-700" href="/pages/management">
+              Inventory
+            </Link>
+            <Link className="m-2 hover:text-red-700" href="/pages/about/">
+              About
+            </Link>
           </nav>
         </header>
         {children}
-        <footer>&copy; Codex January Cohort</footer>
+        <footer className="text-center">&copy; Codex January Cohort</footer>
       </body>
     </html>
   );
