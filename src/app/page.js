@@ -1,15 +1,23 @@
 import React from "react";
-
+import Car from "./components/Car";
 const Home = () => (
-  <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-100">
-    <h1 className="mb-6 text-4xl font-bold text-blue-600">
-      Welcome to CRUD Application
-    </h1>
-
-    <p className="mb-6 text-lg text-gray-700">
-      This is the home page of Car Depo Demo.
-    </p>
-  </div>
+  <main>
+    <h1 className="my-12 text-6xl text-center font-bold">Car Warehousing</h1>
+    <h2 className="mb-8 text-lg text-center font bold">
+      This is the home page of Car Warehouse Demo.
+    </h2>
+    <div>
+      <h3>Car List</h3>
+      <Car
+        Make={"Chevrolet"}
+        Model={"Corvette"}
+        year={"2024"}
+        color={"Black"}
+      />
+      <Car Make={"Ford"} Model={"Mustang"} year={"2024"} color={"Red"} />
+      <Car Make={"Dodge"} Model={"Charger"} year={"2024"} color={"white"} />
+    </div>
+  </main>
 );
 
 export default Home;

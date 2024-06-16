@@ -26,7 +26,7 @@ This is a Next.js application named [Project Name]. It includes a simple home pa
 
 4. Run the development server: `npm run dev`
 
-5. Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the app in action.
+5. Open your browser and navigate to https://car-depo-demo.vercel.app/ to see the app in action.
 
 
 
