@@ -34,7 +34,7 @@ This is a Next.js application named [Project Name]. It includes a simple home pa
 
 
 
-This application is deployed on Vercel. You can view the live site at: car-depo-demo-o0ex3giu7-desg01211517s-projects.vercel.app
+This application is deployed on Vercel. You can view the live site at: car-depo-demo.vercel.app
 
 
 
