@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function ManagementPage() {
+export default function management() {
   return <div>page</div>;
 }
