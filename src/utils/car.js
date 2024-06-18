@@ -1,6 +1,6 @@
 //vehicle class with constructor function//
 
-class Vehicle {
+class Car {
   constructor(make, model, year, color) {
     this.make = make;
     this.model = model;
@@ -16,4 +16,4 @@ class Collection {
   }
 }
 
-export { Vehicle, Collection };
+export { Car, Collection };
