@@ -5,9 +5,21 @@ import { Car, Collection } from "../utils/car.js";
 const Home = () => {
   //const array of cars
   let newCars = [
-    {"Dodge", "Charger", "2020", "green", "12355"},
-    {"Chevy", "Camaro", "2019", "blue", "98765"},
-    {"Ford", "F150", "2022", "White", "26538"},
+    {
+      make: "Dodge",
+      model: "Charger",
+      year: "2020",
+      color: "green",
+      vin: "12355",
+    },
+    {
+      make: "Chevy",
+      model: "Camaro",
+      year: "2019",
+      color: "blue",
+      vin: "98765",
+    },
+    { make: "Ford", model: "F150", year: "2022", color: "White", vin: "26538" },
   ];
 
   //New Warehouse object made with name
@@ -22,33 +34,35 @@ const Home = () => {
       <div>
         <h1 className="m-5">Car List</h1>
         {collection.cars.map((car, index) => (
-            <CarStock
-              key={Car.vin}
-              make={Car.make}
-              model={Car.model}
-              year={Car.year}
-              color={Car.color}
-            />
-          ))};
-        
-
+          <CarStock
+            key={car.vin}
+            make={car.make}
+            model={car.model}
+            year={car.year}
+            color={car.color}
+          />
+        ))}
+        ;
         <CarStock
           make={"Chevy"}
           model={"Corvette"}
           year={"2024"}
           color={"Black"}
+          vin={"76289"}
         />
         <CarStock
           make={"Ford"}
           model={"Mustang"}
           year={"2024"}
           color={"Black"}
+          vin={"98729"}
         />
         <CarStock
           make={"Dodge"}
           model={"Charger"}
           year={"2024"}
           color={"Black"}
+          vin={"98269"}
         />
       </div>
     </main>
