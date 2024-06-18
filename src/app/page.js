@@ -1,6 +1,6 @@
 import React from "react";
 import CarStock from "./components/Car.js";
-import { Car, Collection } from "../utils.car.js";
+import { Car, Collection } from "../utils/car.js";
 
 const Home = () => {
   //const array of cars
