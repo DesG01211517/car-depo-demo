@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function carStock({ make, model, year, color }) {
+export default function CarStock({ make, model, year, color }) {
   return (
     <div className="p-5 m-5 border bg-slate-400 border-black rounded-md">
       Make: {make}
