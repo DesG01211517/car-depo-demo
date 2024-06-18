@@ -1,6 +1,6 @@
 import React from "react";
-import VehicleStock from "./components/Car.js";
-import { Vehicle, Warehouse } from "../utils/car.js";
+import Vehicle from "./components/Car.js";
+import { Vehicle, Collection } from "../utils/car.js";
 const Home = () => {
   //const array of cars
   let newCars = [
@@ -10,7 +10,7 @@ const Home = () => {
   ];
 
   //New Warehouse object made with name
-  const warehouse = new Warehouse("Our Cars", newCars);
+  const collection = new Collection("Our Cars", newCars);
 
   return (
     <main style={{ minHeight: "85vh" }}>

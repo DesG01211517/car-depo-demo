@@ -9,11 +9,11 @@ class Vehicle {
   }
 }
 //warehouse class with constructor function
-class Warehouse {
+class Collection {
   constructor(name) {
     this.name = name;
     this.cars = [];
   }
 }
 
-export { Vehicle, Warehouse };
+export { Vehicle, Collection };
