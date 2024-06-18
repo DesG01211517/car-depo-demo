@@ -10,7 +10,7 @@ const Home = () => {
   ];
 
   //New Warehouse object made with name
-  const Warehouse = new Warehouse("Our Cars", newCars);
+  const warehouse = new Warehouse("Our Cars", newCars);
 
   return (
     <main style={{ minHeight: "85vh" }}>
