@@ -9,8 +9,8 @@ export default function ManagementPage() {
     new Car("Chevy", "Camaro", "2019", "blue", "98765"),
     new Car("Ford", "F150", "2022", "White", "26538"),
   ]);
-  console.log(collection);
 }
+console.log(collection);
 
 //   <div>
 //     {collection.cars.map((car) => {

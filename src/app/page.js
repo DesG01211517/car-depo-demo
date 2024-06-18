@@ -23,7 +23,7 @@ const Home = () => {
   ];
 
   //New Warehouse object made with name
-  const collection = new Collection("Our Cars", newCars);
+  const collection = new Collection(newCars);
 
   // return (
   //   <main style={{ minHeight: "85vh" }}>
