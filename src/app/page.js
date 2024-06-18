@@ -42,7 +42,7 @@ const Home = () => {
             color={car.color}
           />
         ))}
-        ;
+
         <CarStock
           make={"Chevy"}
           model={"Corvette"}
