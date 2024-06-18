@@ -1,3 +1,4 @@
+"use client";
 //vehicle class with constructor function//
 
 class Car {

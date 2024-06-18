@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <header className="w-100">
-          <nav className="flex justify-center w-100">
+          <nav className="flex justify-center w-100 font-bold">
             <Link className="m-2 hover:text-red-700" href="/">
               Home
             </Link>

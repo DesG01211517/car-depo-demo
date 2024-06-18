@@ -25,47 +25,25 @@ const Home = () => {
   //New Warehouse object made with name
   const collection = new Collection("Our Cars", newCars);
 
-  return (
-    <main style={{ minHeight: "85vh" }}>
-      <h1 className="my-12 text-6xl text-center font-bold">Car Warehousing</h1>
-      <h2 className="mb-8 text-lg text-center font bold">
-        This is the home page of Car Warehouse Demo.
-      </h2>
-      <div>
-        <h1 className="m-5">Car List</h1>
-        {collection.cars.map((car, index) => (
-          <CarStock
-            key={car.vin}
-            make={car.make}
-            model={car.model}
-            year={car.year}
-            color={car.color}
-          />
-        ))}
-
-        <CarStock
-          make={"Chevy"}
-          model={"Corvette"}
-          year={"2024"}
-          color={"Black"}
-          vin={"76289"}
-        />
-        <CarStock
-          make={"Ford"}
-          model={"Mustang"}
-          year={"2024"}
-          color={"Black"}
-          vin={"98729"}
-        />
-        <CarStock
-          make={"Dodge"}
-          model={"Charger"}
-          year={"2024"}
-          color={"Black"}
-          vin={"98269"}
-        />
-      </div>
-    </main>
-  );
+  // return (
+  //   <main style={{ minHeight: "85vh" }}>
+  //     <h1 className="my-12 text-6xl text-center font-bold">Car Warehousing</h1>
+  //     <h2 className="mb-8 text-lg text-center font-bold">
+  //       This is the home page of Car Warehouse Demo.
+  //     </h2>
+  //     <div>
+  //       <h1 className="m-5 font-bold">Car List</h1>
+  //       {collection.cars.map((car, index) => (
+  //         <CarStock
+  //           key={`${car.vin}-${index}`}
+  //           make={car.make}
+  //           model={car.model}
+  //           year={car.year}
+  //           color={car.color}
+  //         />
+  //       ))}
+  //     </div>
+  //   </main>
+  // );
 };
 export default Home;
