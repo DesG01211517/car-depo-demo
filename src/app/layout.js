@@ -20,9 +20,6 @@ export default function RootLayout({ children }) {
             <Link className="m-2 hover:text-red-700" href="/pages/management">
               Inventory
             </Link>
-            <Link className="m-2 hover:text-red-700" href="/pages/about/">
-              About
-            </Link>
           </nav>
         </header>
         {children}
