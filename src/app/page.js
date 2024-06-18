@@ -1,5 +1,5 @@
 import React from "react";
-import carStock from "./components/Car.js";
+import CarStock from "./components/Car.js";
 import { Car, Collection } from "../utils/car.js";
 const Home = () => {
   //const array of cars
@@ -20,19 +20,19 @@ const Home = () => {
       </h2>
       <div>
         <h1 className="m-5">Car List</h1>
-        <carStock
+        <CarStock
           make={"Chevy"}
           model={"Corvette"}
           year={"2024"}
           color={"Black"}
         />
-        <carStock
+        <CarStock
           make={"Ford"}
           model={"Mustang"}
           year={"2024"}
           color={"Black"}
         />
-        <carStock
+        <CarStock
           make={"Dodge"}
           model={"Charger"}
           year={"2024"}
