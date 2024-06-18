@@ -11,6 +11,7 @@ export default function CarStock({ make, model, year, color }) {
       <br></br>
       Color: {color}
       <br></br>
+      Vin: {vin}
     </div>
   );
 }

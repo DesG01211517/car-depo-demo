@@ -1,11 +1,12 @@
 //vehicle class with constructor function//
 
 class Car {
-  constructor(make, model, year, color) {
+  constructor(make, model, year, color, vin) {
     this.make = make;
     this.model = model;
     this.year = year;
     this.color = color;
+    this.vin = vin;
   }
 }
 //warehouse class with constructor function
