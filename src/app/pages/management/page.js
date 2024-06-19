@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import CarStock from "@/app/components/Car";
 import { Car, Collection } from "@/utils/car";
 
@@ -10,19 +11,19 @@ export default function ManagementPage() {
     new Car("Ford", "F150", "2022", "White", "26538"),
   ]);
 }
-console.log(collection);
 
-//   <div>
-//     {collection.cars.map((car) => {
-//       return (
-//         <CarStock
-//           key={car.vin}
-//           make={car.make}
-//           model={car.model}
-//           year={car.year}
-//           color={car.color}
-//         />
-//       );
-//     })}
-//   </div>;
-// }
+
+  <div>
+    {collection.cars.map((car) => {
+      return (
+        <CarStock
+          key={car.vin}
+          make={car.make}
+          model={car.model}
+          year={car.year}
+          color={car.color}
+        />
+      );
+    })}
+  </div>;
+}

@@ -1,13 +1,11 @@
-"use client";
 //vehicle class with constructor function//
 
 class Car {
-  constructor(make, model, year, color, vin) {
+  constructor(make, model, year, color) {
     this.make = make;
     this.model = model;
     this.year = year;
     this.color = color;
-    this.vin = vin;
   }
 }
 //warehouse class with constructor function
