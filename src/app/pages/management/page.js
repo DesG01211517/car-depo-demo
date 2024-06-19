@@ -1,7 +1,7 @@
 "use client";
-//import react from "react";
+
 import { useState } from "react";
-import CarItem from "@/components/CarItem";
+import { CarItem } from "./components/CarItem.js";
 
 export default function ManagementPage() {
   const [cars, setCars] = useState([
