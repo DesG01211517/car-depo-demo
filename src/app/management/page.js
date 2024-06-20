@@ -1,7 +1,7 @@
 "use client";
 import next from "next";
 import { useState } from "react";
-import { CarItem } from "././components/CarItem";
+import { CarItem } from "./components/CarItem";
 
 export default function ManagementPage() {
   const [cars, setCars] = useState([
