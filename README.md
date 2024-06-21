@@ -29,3 +29,5 @@ This application is deployed on Vercel. You can view the live site at: car-depo-
 - React
 
 - Tailwind CSS
+
+-Google Cloud Firebase

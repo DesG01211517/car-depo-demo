@@ -68,9 +68,9 @@ export default function ManagementPage() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Manage Cars</h1>
-      <div className="mb-4">
+    <div className="container mx-auto p-3">
+      <h1 className="text-3xl font-bold mb-3">Manage Cars</h1>
+      <div className="mb-4 text-center">
         <input
           type="text"
           value={newCar.make}
@@ -110,7 +110,7 @@ export default function ManagementPage() {
           Add Car
         </button>
       </div>
-      <ul>
+      <ul className="background">
         {cars.map((car) => (
           <CarItem
             key={car.id}

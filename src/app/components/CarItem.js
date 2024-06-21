@@ -3,7 +3,7 @@ import React from "react";
 // components/CarItem.js
 export default function CarItem({ car, onDelete, onEdit }) {
   return (
-    <li className="border p-2 mb-2 flex justify-between">
+    <li className="border-bold p-2 mb-2 flex justify-between">
       {car.make} {car.model} ({car.year}) - {car.color}
       <div>
         <button
@@ -14,7 +14,7 @@ export default function CarItem({ car, onDelete, onEdit }) {
         </button>
         <button
           onClick={() => onDelete(car.id)}
-          className="bg-red-500 text-white p-2"
+          className="bg--500 text-white p-2"
         >
           Delete
         </button>
