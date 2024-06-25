@@ -67,11 +67,6 @@ export default function ManagementPage() {
     setEditingCar(null);
     setEditingData({ make: "", model: "", year: "", color: "", vin: "" });
   };
-  useEffect(() => {
-    getAllDocuments(db, "cars");
-
-    return () => {};
-  }, []);
 
   return (
     <div className="container mx-auto p-3">

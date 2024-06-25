@@ -2,8 +2,8 @@ import { collection, getDocs, addDoc } from "firebase/firestore";
 
 /**
  * generic that gets all documents from a firestore database
- * @param {*} db
- * @param {*} collectionName
+ * @param {database} db
+ * @param { } collectionName
  * @returns
  */
 async function getAllDocuments(db, collectionName) {
@@ -17,17 +17,17 @@ async function getAllDocuments(db, collectionName) {
   return documents;
 }
 
-function addDocument(db, collectionName, data) {
-  // try {
-  //   const docRef = await addDoc(collection(db, collectionName), data) {
-  //     first: "Ada",
-  //     last: "Lovelace",
-  //     born: 1815
-  //   });
-  //   console.log("Document written with ID: ", docRef.id);
-  // } catch (e) {
-  //   console.error("Error adding document: ", e);
-  // }
-}
+// function addDocument(db, collectionName, data) {
+//   try {
+//     const docRef = await addDoc(collection(db, collectionName), data) {
+//     //   first: "Ada",
+//     //   last: "Lovelace",
+//     //   born: 1815
+//     });
+//     console.log("Document written with ID: ", docRef.id);
+//   } catch (e) {
+//     console.error("Error adding document: ", e);
+//   }
+// }
 
-export { getAllDocuments, addDocument };
+export { getAllDocuments };
