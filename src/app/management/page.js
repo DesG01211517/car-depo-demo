@@ -11,7 +11,7 @@ export default function ManagementPage() {
       make: "Dodge",
       model: "Charger",
       year: "2020",
-      color: "Green",
+      color: "Silver",
       vin: "12355",
     },
     {
