@@ -1,7 +1,9 @@
 "use client";
 import next from "next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CarItem from "../components/CarItem";
+import { getAllDocuments } from "@/utils/firebaseUtils";
+import { db } from "../../../firebase.config";
 
 export default function ManagementPage() {
   const [cars, setCars] = useState([
@@ -66,6 +68,11 @@ export default function ManagementPage() {
     setEditingCar(null);
     setEditingData({ make: "", model: "", year: "", color: "", vin: "" });
   };
+  useEffect(() => {
+    getAllDocuments(db, "cars");
+
+    return () => {};
+  }, []);
 
   return (
     <div className="container mx-auto p-3">
