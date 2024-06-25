@@ -1,5 +1,4 @@
 "use client";
-import next from "next";
 import { useState, useEffect } from "react";
 import CarItem from "../components/CarItem";
 import { getAllDocuments } from "@/utils/firebaseUtils";
