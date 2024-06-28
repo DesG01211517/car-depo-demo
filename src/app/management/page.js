@@ -13,8 +13,14 @@ export default function ManagementPage() {
       try {
         const documents = await getAllDocuments(db, "cars");
         const carInstances = documents.map((doc) => {
-          const car = new Car(doc.make, doc.model, doc.year, doc.color);
-          car.id = doc.id;
+          const car = new Car(
+            doc.make,
+            doc.model,
+            doc.year,
+            doc.color,
+            doc.vin
+          );
+          car.id = car.vin;
           return car;
         });
         console.log(carInstances);
