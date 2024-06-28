@@ -3,34 +3,29 @@ import { useState, useEffect } from "react";
 import CarItem from "../components/CarItem";
 import { getAllDocuments } from "@/utils/firebaseUtils";
 import { db } from "../../../firebase.config";
+import { Car, Collection } from "@/utils/car";
 
 export default function ManagementPage() {
-  const [cars, setCars] = useState([
-    {
-      id: 1,
-      make: "Dodge",
-      model: "Charger",
-      year: "2020",
-      color: "Silver",
-      vin: "12355",
-    },
-    {
-      id: 2,
-      make: "Chevy",
-      model: "Camaro",
-      year: "2019",
-      color: "Blue",
-      vin: "98765",
-    },
-    {
-      id: 3,
-      make: "Ford",
-      model: "F150",
-      year: "2022",
-      color: "White",
-      vin: "26538",
-    },
-  ]);
+  const [cars, setCars] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const documents = await getAllDocuments(db, "cars");
+        const carInstances = documents.map((doc) => {
+          const car = new Car(doc.make, doc.model, doc.year, doc.color);
+          car.id = doc.id;
+          return car;
+        });
+        console.log(carInstances);
+        setCars(carInstances);
+      } catch (error) {
+        console.log("Failed fetching data", error);
+      }
+    }
+    fetchData();
+  }, []);
+
   const [newCar, setNewCar] = useState({
     make: "",
     model: "",
