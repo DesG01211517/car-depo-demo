@@ -66,35 +66,35 @@ export default function ManagementPage() {
       <div className="mb-4 text-center">
         <input
           type="text"
-          value={car.make}
+          value={newCar.make}
           onChange={(e) => setNewCar({ ...newCar, make: e.target.value })}
           className="border p-2 mr-2"
           placeholder="Make"
         />
         <input
           type="text"
-          value={car.model}
+          value={newCar.model}
           onChange={(e) => setNewCar({ ...newCar, model: e.target.value })}
           className="border p-2 mr-2"
           placeholder="Model"
         />
         <input
           type="text"
-          value={car.year}
+          value={newCar.year}
           onChange={(e) => setNewCar({ ...newCar, year: e.target.value })}
           className="border p-2 mr-2"
           placeholder="Year"
         />
         <input
           type="text"
-          value={car.color}
+          value={newCar.color}
           onChange={(e) => setNewCar({ ...newCar, color: e.target.value })}
           className="border p-2 mr-2"
           placeholder="Color"
         />
         <input
           type="text"
-          value={car.vin}
+          value={newCar.vin}
           onChange={(e) => setNewCar({ ...newCar, vin: e.target.value })}
           className="border p-2 mr-2"
           placeholder="VIN"
