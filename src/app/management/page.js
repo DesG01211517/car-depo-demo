@@ -8,6 +8,13 @@ import { Car, Collection } from "@/utils/car";
 export default function ManagementPage() {
   const [cars, setCars] = useState([]);
   const [collection, setCollection] = useState(null);
+  const [newCar, setNewCar] = useState({
+    make: "",
+    model: "",
+    year: "",
+    color: "",
+    vin: "",
+  });
 
   useEffect(() => {
     async function fetchData() {
