@@ -1,3 +1,4 @@
+"use client";
 import {
   collection,
   getDocs,
@@ -13,6 +14,7 @@ import {
  * @param { } collectionName
  * @returns
  */
+
 async function getAllDocuments(db, collectionName) {
   const querySnapshot = await getDocs(collection(db, collectionName));
   const documents = [];
@@ -21,7 +23,7 @@ async function getAllDocuments(db, collectionName) {
     documents.push({ id: car.vin, ...doc.data() });
   });
 
-  console.log(documents);
+  console.log(collectionName, documents);
   return documents;
 }
 /**
@@ -37,6 +39,32 @@ async function addDocument(db, collectionName, data) {
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
+  }
+}
+
+async function updateDocument(db, collectionName, id, data) {
+  try {
+    const docRef = doc(db, collectionName, id);
+
+    if (docRef) {
+      await updateDoc(docRef, data);
+    } else {
+      console.log("No Reference", id);
+    }
+  } catch (error) {
+    console.log("Error updating", error);
+  }
+}
+
+async function deleteDocument(db, collectionName, id) {
+  try {
+    const docRef = doc(db, collectionName, id);
+    if (docRef) {
+      await deleteDoc(docRef);
+      console.log("Document deleted", docRef.id);
+    }
+  } catch (error) {
+    console.log("Error deleting document", error);
   }
 }
 

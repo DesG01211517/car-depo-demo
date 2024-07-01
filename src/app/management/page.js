@@ -7,38 +7,29 @@ import { Car, Collection } from "@/utils/car";
 
 export default function ManagementPage() {
   const [cars, setCars] = useState([]);
+  const [collection, setCollection] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
       try {
         const documents = await getAllDocuments(db, "cars");
-        const carInstances = documents.map((doc) => {
-          const car = new Car(
-            doc.make,
-            doc.model,
-            doc.year,
-            doc.color,
-            doc.vin
-          );
-          car.id = car.vin;
-          return car;
-        });
-        console.log(carInstances);
+
+        const carInstances = documents.map(
+          (doc) => new Car(doc.make, doc.model, doc.year, doc.color, doc.vin)
+        );
+        setCollection(new Collection("Car Collection", carInstances));
         setCars(carInstances);
       } catch (error) {
-        console.log("Failed fetching data", error);
+        console.log("error fetching docs", error);
       }
     }
+
     fetchData();
+    return () => {
+      console.log("home page side effect cleanup");
+    };
   }, []);
 
-  const [newCar, setNewCar] = useState({
-    make: "",
-    model: "",
-    year: "",
-    color: "",
-    vin: "",
-  });
   const [editingCar, setEditingCar] = useState(null);
   const [editingData, setEditingData] = useState({
     make: "",
@@ -75,35 +66,35 @@ export default function ManagementPage() {
       <div className="mb-4 text-center">
         <input
           type="text"
-          value={newCar.make}
+          value={car.make}
           onChange={(e) => setNewCar({ ...newCar, make: e.target.value })}
           className="border p-2 mr-2"
           placeholder="Make"
         />
         <input
           type="text"
-          value={newCar.model}
+          value={car.model}
           onChange={(e) => setNewCar({ ...newCar, model: e.target.value })}
           className="border p-2 mr-2"
           placeholder="Model"
         />
         <input
           type="text"
-          value={newCar.year}
+          value={car.year}
           onChange={(e) => setNewCar({ ...newCar, year: e.target.value })}
           className="border p-2 mr-2"
           placeholder="Year"
         />
         <input
           type="text"
-          value={newCar.color}
+          value={car.color}
           onChange={(e) => setNewCar({ ...newCar, color: e.target.value })}
           className="border p-2 mr-2"
           placeholder="Color"
         />
         <input
           type="text"
-          value={newCar.vin}
+          value={car.vin}
           onChange={(e) => setNewCar({ ...newCar, vin: e.target.value })}
           className="border p-2 mr-2"
           placeholder="VIN"
