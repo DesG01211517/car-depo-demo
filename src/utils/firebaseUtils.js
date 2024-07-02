@@ -16,11 +16,12 @@ import {
  */
 
 async function getAllDocuments(db, collectionName) {
+  console.log(db);
   const querySnapshot = await getDocs(collection(db, collectionName));
   const documents = [];
 
-  querySnapshot.forEach((doc) => {
-    documents.push({ id: car.vin, ...doc.data() });
+  querySnapshot.forEach((car) => {
+    documents.push({ id: car.vin, ...car.data() });
   });
 
   console.log(collectionName, documents);

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import React from "react";
 import CarItem from "../components/CarItem";
 import { getAllDocuments } from "@/utils/firebaseUtils";
 import { db } from "../../../firebase.config";
@@ -111,9 +112,9 @@ export default function ManagementPage() {
         </button>
       </div>
       <ul className="background">
-        {cars.map((car) => (
+        {cars.map((car, index) => (
           <CarItem
-            key={car.id}
+            key={index}
             car={car}
             onDelete={deleteCar}
             onEdit={editCar}
