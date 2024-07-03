@@ -16,7 +16,7 @@ import {
  */
 
 async function getAllDocuments(db, collectionName) {
-  console.log(db);
+  //console.log(db);
   const querySnapshot = await getDocs(collection(db, collectionName));
   const documents = [];
 
@@ -24,7 +24,7 @@ async function getAllDocuments(db, collectionName) {
     documents.push({ id: car.vin, ...car.data() });
   });
 
-  console.log(collectionName, documents);
+  //console.log(collectionName, documents);
   return documents;
 }
 /**
