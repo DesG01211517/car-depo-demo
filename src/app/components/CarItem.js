@@ -8,13 +8,13 @@ export default function CarItem({ car, onDelete, onEdit }) {
       <div className="flex justify-end">
         <button
           onClick={() => onEdit(car.id)}
-          className="bg-yellow-400 text-white p-2 mr-2"
+          className="bg-yellow-400 text-black p-2 mr-2"
         >
           Edit
         </button>
         <button
           onClick={() => onDelete(car.id)}
-          className="bg-red-500 text-white p-2"
+          className="bg-red-500 text-black p-2"
         >
           Delete
         </button>
