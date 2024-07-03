@@ -28,13 +28,13 @@ export default function ManagementPage() {
         setCollection(new Collection("Car Collection", carInstances));
         setCars(carInstances);
       } catch (error) {
-        console.log("error fetching docs", error);
+        //console.log("error fetching docs", error);
       }
     }
 
     fetchData();
     return () => {
-      console.log("home page side effect cleanup");
+      //console.log("home page side effect cleanup");
     };
   }, []);
 
