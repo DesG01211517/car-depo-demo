@@ -107,8 +107,17 @@ export default function ManagementPage() {
           className="border p-2 mr-2"
           placeholder="VIN"
         />
-        <button onClick={addCar} className="bg-blue-500 text-white p-2">
+        <button
+          onClick={addCar}
+          className="border p-2 mr-2 bg-blue-500 text-white"
+        >
           Add Car
+        </button>
+        <button
+          onClick={updateCar}
+          className="border p-2 mr-2 bg-green-500 text-white p-2"
+        >
+          Update Car
         </button>
       </div>
       <ul className="background">
@@ -168,9 +177,6 @@ export default function ManagementPage() {
             className="border p-2 mr-2"
             placeholder="VIN"
           />
-          <button onClick={updateCar} className="bg-green-500 text-white p-2">
-            Update Car
-          </button>
         </div>
       )}
     </div>
