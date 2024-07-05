@@ -130,55 +130,6 @@ export default function ManagementPage() {
           />
         ))}
       </ul>
-      {editingCar && (
-        <div className="mt-4">
-          <input
-            type="text"
-            value={editingData.make}
-            onChange={(e) =>
-              setEditingData({ ...editingData, make: e.target.value })
-            }
-            className="border p-2 mr-2"
-            placeholder="Make"
-          />
-          <input
-            type="text"
-            value={editingData.model}
-            onChange={(e) =>
-              setEditingData({ ...editingData, model: e.target.value })
-            }
-            className="border p-2 mr-2"
-            placeholder="Model"
-          />
-          <input
-            type="text"
-            value={editingData.year}
-            onChange={(e) =>
-              setEditingData({ ...editingData, year: e.target.value })
-            }
-            className="border p-2 mr-2"
-            placeholder="Year"
-          />
-          <input
-            type="text"
-            value={editingData.color}
-            onChange={(e) =>
-              setEditingData({ ...editingData, color: e.target.value })
-            }
-            className="border p-2 mr-2"
-            placeholder="Color"
-          />
-          <input
-            type="text"
-            value={editingData.vin}
-            onChange={(e) =>
-              setEditingData({ ...editingData, vin: e.target.value })
-            }
-            className="border p-2 mr-2"
-            placeholder="VIN"
-          />
-        </div>
-      )}
     </div>
   );
 }
