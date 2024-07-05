@@ -21,8 +21,6 @@ const app = initializeApp(firebaseConfig);
 //const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
-import { getAuth } from "firebase/auth";
-
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
 
