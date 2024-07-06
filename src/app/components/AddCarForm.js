@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function AddCarForm({ addCar }) {
+export default function AddCarForm({ setNewCar }) {
   return (
-    <form onclick={setNewCar} className="p-5 m-5 border border-black">
+    <form className="p-5 m-5">
       <input
         type="text"
         value={newCar.make}

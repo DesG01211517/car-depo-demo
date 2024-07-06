@@ -5,7 +5,7 @@ import CarItem from "../components/CarItem";
 import { getAllDocuments } from "@/utils/firebaseUtils";
 import { db } from "../../../firebase.config";
 import { Car, Collection } from "@/utils/car";
-//import { AddCarForm } from "../components/AddCarForm";
+// import { AddCarForm } from "../components/AddCarForm";
 
 export default function ManagementPage() {
   const [cars, setCars] = useState([]);
@@ -73,7 +73,7 @@ export default function ManagementPage() {
     <div className="container mx-auto p-3">
       <h1 className="text-3xl font-bold mb-3">Manage Cars</h1>
 
-      {/* <AddCarForm handleAddCar={handleAddCar} /> */}
+      {/* <AddCarForm handleAddCar={setNewCar} /> */}
       <form>
         <input
           type="text"
