@@ -13,7 +13,7 @@ import { useState } from 'react';
       };
     
       return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="p-4 m-4 border-4 rounded-2xl items-center min-h-40 bg-blue-100">
           <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
             <h2 className="text-2xl font-bold mb-4">Login</h2>
             <div className="mb-4">
