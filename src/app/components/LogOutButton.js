@@ -12,7 +12,7 @@ const LogoutButton = ({ onLogout }) => {
   return (
     <button
       onClick={handleLogout}
-      className="bg-red-500 text-white p-2 rounded"
+      className="flex-right bg-red-500 text-white p-2 rounded"
     >
       Logout
     </button>
