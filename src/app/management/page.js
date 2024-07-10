@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import CarItem from "../components/CarItem";
 import { getAllDocuments } from "@/utils/firebaseUtils";
-import { db } from "../../../firebase.config";
+import { db, auth } from "../../../firebase.config";
 import { Car, Collection } from "@/utils/car";
 import RegistrationForm from "../components/RegisterForm";
 // import { AddCarForm } from "../components/AddCarForm";
@@ -71,6 +71,7 @@ export default function ManagementPage() {
     setEditingCar(null);
     setEditingData({ make: "", model: "", year: "", color: "", vin: "" });
   };
+  const loggedIn = false;
 
   return (
     <div className="container mx-auto p-3">
@@ -82,7 +83,7 @@ export default function ManagementPage() {
 
       <LoginForm />
 
-      {/* <AddCarForm handleAddCar={setNewCar} /> */}
+      {/* {<AddCarForm handleAddCar={setNewCar} />} */}
       <form>
         <input
           type="text"
