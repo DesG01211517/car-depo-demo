@@ -83,8 +83,9 @@ export default function ManagementPage() {
 
       <LoginForm />
 
-      {/* {<AddCarForm handleAddCar={setNewCar} />} */}
-      <form>
+      {/* <AddCarForm handleAddCar={setNewCar} /> */}
+
+      <form className="p-5 m-5">
         <input
           type="text"
           value={newCar.make}
@@ -134,6 +135,7 @@ export default function ManagementPage() {
           Update Car
         </button>
       </form>
+
       {cars.map((car, index) => (
         <CarItem key={index} car={car} onDelete={deleteCar} onEdit={editCar} />
       ))}
