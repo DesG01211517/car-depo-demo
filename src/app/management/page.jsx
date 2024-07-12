@@ -10,6 +10,7 @@ import RegistrationForm from "../components/RegisterForm";
 import LoginForm from "../components/LoginForm";
 import LogoutButton from "../components/LogOutButton";
 
+
 export default function ManagementPage() {
   const [cars, setCars] = useState([]);
   const [collection, setCollection] = useState(null);
@@ -35,12 +36,14 @@ export default function ManagementPage() {
         //console.log("error fetching docs", error);
       }
     }
-
+    
     fetchData();
     return () => {
       //console.log("home page side effect cleanup");
     };
   }, []);
+  
+  //const [auth.currentUser, setisLoggedIn] = useState(false)
 
   const [editingCar, setEditingCar] = useState(null);
   const [editingData, setEditingData] = useState({
@@ -71,13 +74,12 @@ export default function ManagementPage() {
     setEditingCar(null);
     setEditingData({ make: "", model: "", year: "", color: "", vin: "" });
   };
-  const isLoggedIn = false;
 
   return (
     <div className="container mx-auto p-3">
       <h1 className="text-center text-3xl font-bold mb-3">Manage Cars</h1>
   
-      {isLoggedIn ? (
+      {auth.currentUser ? (
         <>
           <div className="my-2 text-center">
             <LogoutButton />

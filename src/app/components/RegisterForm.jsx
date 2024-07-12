@@ -1,20 +1,22 @@
 import { useState } from 'react';
+import { registerUser } from '@/utils/authUtils';
 
 const RegistrationForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log('Email:', email);
     console.log('Password:', password);
+    await registerUser(email, password);
   };
 
   return (
     <div className="p-4 m-4 border-4 rounded-2xl items-center min-h-40 bg-blue-100">
-      <p className="py-4 text-2xl font-bold text-center text-blue-300">
-        Please Register or Login
+      <p className="py-4 text-2xl font-bold text-center text-black">
+        Please Register Here
       </p>
       <div className="w-full max-w-md p-8 mx-auto space-y-8 bg-white p-6 rounded-lg shadow-md">
       <form onSubmit={handleSubmit} className="spacey-y-6">

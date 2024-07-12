@@ -1,12 +1,10 @@
 import React from "react";
+import { logout } from "@/utils/authUtils";
 
-const LogoutButton = ({ onLogout }) => {
-  const handleLogout = () => {
+const LogoutButton = () => {
+  const handleLogout = async () => {
     // Handle logout logic here
-    console.log("User logged out");
-    if (onLogout) {
-      onLogout();
-    }
+    logout();
   };
 
   return (
