@@ -71,74 +71,80 @@ export default function ManagementPage() {
     setEditingCar(null);
     setEditingData({ make: "", model: "", year: "", color: "", vin: "" });
   };
-  const loggedIn = false;
+  const isLoggedIn = false;
 
   return (
     <div className="container mx-auto p-3">
       <h1 className="text-center text-3xl font-bold mb-3">Manage Cars</h1>
-
-      <LogoutButton />
-
-      <RegistrationForm />
-
-      <LoginForm />
-
-      {/* <AddCarForm handleAddCar={setNewCar} /> */}
-
-      <form className="p-5 m-5">
-        <input
-          type="text"
-          value={newCar.make}
-          onChange={(e) => setNewCar({ ...newCar, make: e.target.value })}
-          className="border p-2 mr-2"
-          placeholder="Make"
-        />
-        <input
-          type="text"
-          value={newCar.model}
-          onChange={(e) => setNewCar({ ...newCar, model: e.target.value })}
-          className="border p-2 mr-2"
-          placeholder="Model"
-        />
-        <input
-          type="text"
-          value={newCar.year}
-          onChange={(e) => setNewCar({ ...newCar, year: e.target.value })}
-          className="border p-2 mr-2"
-          placeholder="Year"
-        />
-        <input
-          type="text"
-          value={newCar.color}
-          onChange={(e) => setNewCar({ ...newCar, color: e.target.value })}
-          className="border p-2 mr-2"
-          placeholder="Color"
-        />
-        <input
-          type="text"
-          value={newCar.vin}
-          onChange={(e) => setNewCar({ ...newCar, vin: e.target.value })}
-          className="border p-2 mr-2"
-          placeholder="VIN"
-        />
-
-        <button
-          onClick={addCar}
-          className="border p-2 mr-2 bg-blue-500 text-white"
-        >
-          Add Car
-        </button>
-        <button
-          onClick={updateCar}
-          className="border mr-2 bg-green-500 text-white p-2"
-        >
-          Update Car
-        </button>
-      </form>
-
-      {cars.map((car, index) => (
-        <CarItem key={index} car={car} onDelete={deleteCar} onEdit={editCar} />
-      ))}
+  
+      {isLoggedIn ? (
+        <>
+          <div className="my-2 text-center">
+            <LogoutButton />
+          </div>
+  
+          <form className="p-5 m-5">
+            <input
+              type="text"
+              value={newCar.make}
+              onChange={(e) => setNewCar({ ...newCar, make: e.target.value })}
+              className="border p-2 mr-2"
+              placeholder="Make"
+            />
+            <input
+              type="text"
+              value={newCar.model}
+              onChange={(e) => setNewCar({ ...newCar, model: e.target.value })}
+              className="border p-2 mr-2"
+              placeholder="Model"
+            />
+            <input
+              type="text"
+              value={newCar.year}
+              onChange={(e) => setNewCar({ ...newCar, year: e.target.value })}
+              className="border p-2 mr-2"
+              placeholder="Year"
+            />
+            <input
+              type="text"
+              value={newCar.color}
+              onChange={(e) => setNewCar({ ...newCar, color: e.target.value })}
+              className="border p-2 mr-2"
+              placeholder="Color"
+            />
+            <input
+              type="text"
+              value={newCar.vin}
+              onChange={(e) => setNewCar({ ...newCar, vin: e.target.value })}
+              className="border p-2 mr-2"
+              placeholder="VIN"
+            />
+  
+            <button
+              onClick={addCar}
+              className="border p-2 mr-2 bg-blue-500 text-white"
+            >
+              Add Car
+            </button>
+            <button
+              onClick={updateCar}
+              className="border mr-2 bg-green-500 text-white p-2"
+            >
+              Update Car
+            </button>
+          </form>
+  
+          {cars.map((car, index) => (
+            <CarItem key={index} car={car} onDelete={deleteCar} onEdit={editCar} />
+          ))}
+        </>
+      ) : (
+        <>
+          <RegistrationForm />
+        
+          <LoginForm />
+        </>
+      )}
     </div>
   );
 }

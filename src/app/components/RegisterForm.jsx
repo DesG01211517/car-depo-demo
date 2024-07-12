@@ -13,7 +13,11 @@ const RegistrationForm = () => {
 
   return (
     <div className="p-4 m-4 border-4 rounded-2xl items-center min-h-40 bg-blue-100">
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+      <p className="py-4 text-2xl font-bold text-center text-blue-300">
+        Please Register or Login
+      </p>
+      <div className="w-full max-w-md p-8 mx-auto space-y-8 bg-white p-6 rounded-lg shadow-md">
+      <form onSubmit={handleSubmit} className="spacey-y-6">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
@@ -39,6 +43,7 @@ const RegistrationForm = () => {
         </div>
         <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">Register</button>
       </form>
+      </div>
     </div>
   );
 };
