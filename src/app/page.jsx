@@ -19,7 +19,7 @@ const Home = () => {
         This is the home page of Car Warehouse Demo.
       </h2>
       <div>
-        <h1 className="m-5">Car List</h1>
+        <h2 className="m-5">Car List</h2>
         <CarStock
           make={"Chevy"}
           model={"Corvette"}
